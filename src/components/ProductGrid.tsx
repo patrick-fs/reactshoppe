@@ -36,10 +36,10 @@ const ProductGrid = ({ productList }: ProductGridProps) => {
               return (
               <Col key={j} md={4}>
                 <ProductCard 
-                title = {product.title} 
-                description = {product.description}
-                price = {product.price}
-                image = {product.image} />
+                  title = {product.title} 
+                  description = {product.description}
+                  price = {product.price}
+                  image = {product.image} />
               </Col>);
             })}
           </Row>);
