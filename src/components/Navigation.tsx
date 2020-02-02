@@ -1,8 +1,8 @@
 import React from 'react';
 import { 
-  Button, 
   Navbar,
   Nav } from 'react-bootstrap';
+import CartButton from './CartButton';
 
 const Navigation = () => {
   return (
@@ -12,7 +12,7 @@ const Navigation = () => {
     <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto"></Nav>
       <Nav>
-        <Nav.Link href="/checkout">Checkout</Nav.Link>
+        <CartButton />
       </Nav>
     </Navbar.Collapse>
   </Navbar>
