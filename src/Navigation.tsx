@@ -1,13 +1,23 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { 
+  Button, 
+  Navbar,
+  Nav } from 'react-bootstrap';
 
 const Navigation = () => {
   return (
-  <>
-    <Link to="/">Home</Link>
-    <Link to="/market">Market</Link>
-    <Link to="/checkout">Checkout</Link>
-  </>);
+    <Navbar bg="light" expand="lg">
+    <Navbar.Brand href="/">Reactshoppe</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto"></Nav>
+      <Nav>
+        <Nav.Link href="/market">Market</Nav.Link>
+        <Nav.Link href="/checkout">Checkout</Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
+  );
 }
 
 export default Navigation;
