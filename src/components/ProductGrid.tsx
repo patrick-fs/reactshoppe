@@ -13,17 +13,17 @@ const COLUMN_COUNT = 3;
 
 const ProductGrid = ({ productList }: ProductGridProps) => {
   let productRows: Product[][] = [];
-  let prodcutColumns: Product[] = [];
+  let productColumns: Product[] = [];
   productList.forEach(el => {    
-    prodcutColumns.push(el);
-    if (prodcutColumns.length === COLUMN_COUNT) {
-      productRows.push(prodcutColumns);
-      prodcutColumns = [];
+    productColumns.push(el);
+    if (productColumns.length === COLUMN_COUNT) {
+      productRows.push(productColumns);
+      productColumns = [];
     }
   });
 
   // handle any remaining elements
-  productRows.push(prodcutColumns);
+  productRows.push(productColumns);
 
   return(
     <Container>
