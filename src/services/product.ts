@@ -10,7 +10,8 @@ export const GetProducts = async () : Promise<Product[]> => {
   const products: Product[] = await response.json();
   return products.map(el => {
     return { 
-      ...el,
-      image: `https://fruitshoppe.firebaseapp.com/images/${el.image}` };
+        ...el,
+        image: `https://fruitshoppe.firebaseapp.com/images/${el.image}`
+      };
     });
 }
