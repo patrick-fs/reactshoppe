@@ -5,8 +5,8 @@ export type Product = {
   image: string,
 }
 
-export const GetProducts = async () : Promise<Product[]> => {
-  const response = await fetch('data/products.json');
+export const getProducts = async () : Promise<Product[]> => {
+  const response = await fetch(`${process.env.PUBLIC_URL}/data/products.json`);
   const products: Product[] = await response.json();
   return products.map(el => {
     return { 
