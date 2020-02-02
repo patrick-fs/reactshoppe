@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Home from './Home';
-import Market from './Market';
+import Products from './Products';
 import Checkout from './Checkout';
 import Navigation from './Navigation';
 import {
@@ -20,7 +19,7 @@ const App = () => {
           <Checkout />
         </Route>
         <Route path="/">
-          <Market />
+          <Products />
         </Route>
       </Switch>
     </div>

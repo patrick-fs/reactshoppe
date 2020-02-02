@@ -1,8 +1,8 @@
-type Product = {
-  title: String,
-  description: String,
-  price: String,
-  image: String,
+export type Product = {
+  title: string,
+  description: string,
+  price: string,
+  image: string,
 }
 
 export const GetProducts = async () : Promise<Product[]> => {
