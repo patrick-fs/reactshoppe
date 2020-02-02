@@ -22,7 +22,7 @@ const ProductGrid = ({ productList }: ProductGridProps) => {
     }
   });
 
-  // handle any remaining elements
+  // handle any remaining products
   productRows.push(productColumns);
 
   return(
