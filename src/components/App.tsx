@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Products from './Products';
 import Checkout from './Checkout';
 import Navigation from './Navigation';
