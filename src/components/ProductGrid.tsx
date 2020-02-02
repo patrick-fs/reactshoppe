@@ -7,16 +7,19 @@ import {
 import ProductCard from './ProductCard';
 import { Product } from '../services/product';
 
-type ProductGridProps = { productList: Product[] };
+type ProductGridProps = { 
+  productList: Product[],
+  columnCount?: number,
+};
 
-const COLUMN_COUNT = 3;
+const BOOTSTRAP_GRID_WIDTH = 12;
 
-const ProductGrid = ({ productList }: ProductGridProps) => {
+const ProductGrid = ({ productList, columnCount = 3 }: ProductGridProps) => {
   let productRows: Product[][] = [];
   let productColumns: Product[] = [];
   productList.forEach(product => {    
     productColumns.push(product);
-    if (productColumns.length === COLUMN_COUNT) {
+    if (productColumns.length === columnCount) {
       productRows.push(productColumns);
       productColumns = [];
     }
@@ -32,7 +35,7 @@ const ProductGrid = ({ productList }: ProductGridProps) => {
           <Row key={i}>
             { productColumn.map((product, j) => {
               return (
-              <Col key={j} md={4}>
+              <Col key={j} md={BOOTSTRAP_GRID_WIDTH / columnCount}>
                 <ProductCard 
                   title = {product.title} 
                   description = {product.description}
