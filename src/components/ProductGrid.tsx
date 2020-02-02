@@ -12,27 +12,25 @@ type ProductGridProps = { productList: Product[] };
 const COLUMN_COUNT = 3;
 
 const ProductGrid = ({ productList }: ProductGridProps) => {
-  let productMatrix: Product[][] = [];
-  let innerArray: Product[] = [];
-  let totalProductsAdded = 0;
+  let productRows: Product[][] = [];
+  let prodcutColumns: Product[] = [];
   productList.forEach(el => {    
-    innerArray.push(el);
-    if (innerArray.length === COLUMN_COUNT) {
-      totalProductsAdded += COLUMN_COUNT;
-      productMatrix.push(innerArray);
-      innerArray = [];
+    prodcutColumns.push(el);
+    if (prodcutColumns.length === COLUMN_COUNT) {
+      productRows.push(prodcutColumns);
+      prodcutColumns = [];
     }
   });
 
   // handle any remaining elements
-  productMatrix.push(productList.slice(totalProductsAdded));
+  productRows.push(prodcutColumns);
 
   return(
     <Container>
-      { productMatrix.map((el, i) => {
+      { productRows.map((productColumn, i) => {
         return (
           <Row key={i}>
-            { el.map((product, j) => {
+            { productColumn.map((product, j) => {
               return (
               <Col key={j} md={4}>
                 <ProductCard 
