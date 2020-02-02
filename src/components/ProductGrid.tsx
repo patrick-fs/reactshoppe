@@ -14,8 +14,8 @@ const COLUMN_COUNT = 3;
 const ProductGrid = ({ productList }: ProductGridProps) => {
   let productRows: Product[][] = [];
   let productColumns: Product[] = [];
-  productList.forEach(el => {    
-    productColumns.push(el);
+  productList.forEach(product => {    
+    productColumns.push(product);
     if (productColumns.length === COLUMN_COUNT) {
       productRows.push(productColumns);
       productColumns = [];
