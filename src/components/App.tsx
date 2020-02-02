@@ -16,14 +16,11 @@ const App = () => {
         <Navigation />
       </header>
       <Switch>
-        <Route path="/market">
-          <Market />
-        </Route>
         <Route path="/checkout">
           <Checkout />
         </Route>
         <Route path="/">
-          <Home />
+          <Market />
         </Route>
       </Switch>
     </div>
