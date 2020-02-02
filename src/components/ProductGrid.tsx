@@ -35,7 +35,7 @@ const ProductGrid = ({ productList, columnCount = 3 }: ProductGridProps) => {
           <Row key={i}>
             { productColumn.map((product, j) => {
               return (
-              <Col key={j} md={BOOTSTRAP_GRID_WIDTH / columnCount}>
+              <Col key={j} md={Math.floor(BOOTSTRAP_GRID_WIDTH / columnCount)}>
                 <ProductCard 
                   title = {product.title} 
                   description = {product.description}
