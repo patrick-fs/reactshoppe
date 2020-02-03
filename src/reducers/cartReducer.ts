@@ -4,8 +4,6 @@ import {
   CartActionTypes,
   CartState,
 } from '../actions/types';
-import { act } from '@testing-library/react';
-//import { Product } from '../services/product';
 
 const initialState : CartState = {
   products: [],

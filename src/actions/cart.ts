@@ -4,7 +4,7 @@ import { ADD_TO_CART, REMOVE_FROM_CART, CartActionTypes } from './types';
 // TODO: manage side-effects, update cart in local storage with the cart service
 
 export const addToCart = (product: Product) : CartActionTypes => {
-  // console.log(`action with product ${JSON.stringify(product)}`);
+  console.log(`add to cart with product ${JSON.stringify(product)}`);
   return {
     type: ADD_TO_CART,
     product,

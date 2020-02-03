@@ -1,16 +1,24 @@
 import React from 'react';
+import { connect, ConnectedProps } from 'react-redux'
+import { RootState } from '../reducers';
 import {
-    Button,
-  } from 'react-bootstrap';
+  Button,
+} from 'react-bootstrap';
 
-type CartButtonProps = {
-  itemCount?: number,
-};
+const mapState = (state: RootState) => ({
+  products: state.cartState.products
+});
 
-const CartButton = ({ itemCount = 0 }: CartButtonProps) => {
+const connector = connect(
+  mapState,
+);
+
+type PropsFromRedux = ConnectedProps<typeof connector>;
+
+const CartButton = (props: PropsFromRedux) => {
   return(
-    <Button variant="dark">My Cart { itemCount } </Button>
+    <Button variant="dark">My Cart {props.products.length}</Button>
   );
 };
 
-export default CartButton;
+export default connector(CartButton);
