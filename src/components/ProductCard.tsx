@@ -1,23 +1,40 @@
 import React from 'react';
 import { Product } from '../services/product';
+import { addToCart } from '../actions/cart';
+import { connect, ConnectedProps } from 'react-redux'
 import {
   Card,
   Button,
 } from 'react-bootstrap';
 
-const ProductCard = ({ title, price, description, image }: Product) => {
+const mapDispatch = {
+  onAddToCart: (product: Product) => addToCart(product),
+};
+
+const connector = connect(
+  null,
+  mapDispatch
+);
+
+type PropsFromRedux = ConnectedProps<typeof connector>;
+
+type Props = PropsFromRedux & {
+  product: Product
+};
+
+const ProductCard = ({ onAddToCart, product }: Props) => {
   return(
     <Card>
-      <Card.Img variant="top" src={image} />
+      <Card.Img variant="top" src={product.image} />
       <Card.Body>
-        <Card.Title>{title} - ${price}</Card.Title>
+        <Card.Title>{product.title} - ${product.price}</Card.Title>
         <Card.Text>
-          {description}
+          {product.description}
         </Card.Text>
-        <Button variant="outline-primary">Add to Cart</Button>
+        <Button variant="outline-primary" onClick={() => onAddToCart(product)}>Add to Cart</Button>
       </Card.Body>
     </Card>
   );
 }
 
-export default ProductCard;
+export default connector(ProductCard);
