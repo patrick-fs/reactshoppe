@@ -1,9 +1,4 @@
-export type Product = {
-  title: string,
-  description: string,
-  price: string,
-  image: string,
-}
+import { Product } from "../types/product";
 
 export const getProducts = async () : Promise<Product[]> => {
   const response = await fetch(`${process.env.PUBLIC_URL}/data/products.json`);

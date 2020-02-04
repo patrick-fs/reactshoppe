@@ -5,7 +5,7 @@ import {
   Row,
 } from 'react-bootstrap';
 import ProductCard from './ProductCard';
-import { Product } from '../services/product';
+import { Product } from "../types/product";
 
 type ProductGridProps = { 
   productList: Product[],

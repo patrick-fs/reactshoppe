@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product } from '../services/product';
+import { Product } from "../types/product";
 import { addToCart } from '../actions/cart';
 import { connect, ConnectedProps } from 'react-redux'
 import {

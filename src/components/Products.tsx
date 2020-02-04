@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductGrid from './ProductGrid';
-import { getProducts, Product } from '../services/product';
+import { getProducts } from '../services/product';
+import { Product } from "../types/product";
 
 const Products = () => {
   const [productList, setProductList] = useState([] as Product[]);
