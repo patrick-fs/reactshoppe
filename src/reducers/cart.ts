@@ -5,9 +5,16 @@ import {
   CartActionTypes,
   CartState,
 } from '../types/cart';
+import { Product } from '../types/product';
 
 const initialState : CartState = {
   products: [],
+}
+
+const sortByTitle = (prod1: Product, prod2: Product) => {
+  if (prod1.title > prod2.title) return 1;
+  if (prod1.title < prod2.title) return -1;
+  return 0;
 }
 
 const cartReducer = (state = initialState, action: CartActionTypes) : CartState => {
@@ -22,7 +29,7 @@ const cartReducer = (state = initialState, action: CartActionTypes) : CartState 
       }
     case VIEW_CART:
       return {
-        products: state.products,
+        products: state.products.sort(sortByTitle),
       }
     default:
       return state;
