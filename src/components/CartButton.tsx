@@ -1,9 +1,14 @@
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux'
+import { viewCart } from '../actions/cart';
 import { RootState } from '../reducers';
-import {
-  Button,
-} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { Product } from '../types/product';
+import { Link } from "react-router-dom";
+
+const mapDispatch = {
+  onViewCart: (products: Product[]) => viewCart(products),
+};
 
 const mapState = (state: RootState) => ({
   products: state.cartState.products
@@ -11,13 +16,14 @@ const mapState = (state: RootState) => ({
 
 const connector = connect(
   mapState,
+  mapDispatch,
 );
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
-const CartButton = (props: PropsFromRedux) => {
+const CartButton = ({onViewCart, products}: PropsFromRedux) => {
   return(
-    <Button variant="dark" href="/cart">My Cart {props.products.length}</Button>
+    <Link to="/cart" onClick={() => onViewCart(products)}><Button>My Cart {products.length}</Button></Link>
   );
 };
 
