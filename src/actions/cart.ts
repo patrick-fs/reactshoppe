@@ -1,5 +1,5 @@
 import { Product } from '../services/product';
-import { ADD_TO_CART, REMOVE_FROM_CART, CartActionTypes } from './types';
+import { ADD_TO_CART, REMOVE_FROM_CART, CartActionTypes } from '../types/cart';
 
 // TODO: manage side-effects, update cart in local storage with the cart service
 

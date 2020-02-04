@@ -3,7 +3,7 @@ import {
   REMOVE_FROM_CART,
   CartActionTypes,
   CartState,
-} from '../actions/types';
+} from '../types/cart';
 
 const initialState : CartState = {
   products: [],
