@@ -10,10 +10,10 @@ export const addToCart = (product: Product) : CartActionTypes => {
   }
 };
 
-export const removeFromCart = (product: Product) : CartActionTypes => {
+export const removeFromCart = (location: number) : CartActionTypes => {
   return {
     type: REMOVE_FROM_CART,
-    product,
+    location,
   }
 }
 

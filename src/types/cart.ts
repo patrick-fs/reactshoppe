@@ -11,7 +11,7 @@ export interface AddToCardAction {
 
 export interface RemoveFromCartAction {
   type: typeof REMOVE_FROM_CART,
-  product: Product, // TODO: just use Id, after this is added to the product entity
+  location: number,
 }
 
 export interface ViewCartAction {

@@ -18,7 +18,7 @@ const cartReducer = (state = initialState, action: CartActionTypes) : CartState 
       };
     case REMOVE_FROM_CART:
       return {
-        products: state.products.filter(p => p.title === action.product.title),
+        products: state.products.filter((_, index) => index !== action.location),
       }
     case VIEW_CART:
       return {

@@ -1,6 +1,7 @@
 import React from 'react';
 import Products from './Products';
 import Checkout from './Checkout';
+import Cart from './Cart';
 import Navigation from './Navigation';
 import {
   Switch,
@@ -15,7 +16,7 @@ const App = () => {
       </header>
       <Switch>
         <Route path="/cart">
-          <Checkout />
+          <Cart />
         </Route>
         <Route path="/checkout">
           <Checkout />
