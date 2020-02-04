@@ -3,6 +3,7 @@ import { connect, ConnectedProps } from 'react-redux'
 import { removeFromCart } from '../actions/cart';
 import { RootState } from '../reducers';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const mapDispatch = {
   onRemoveFromCart: (location: number) => removeFromCart(location),
@@ -25,6 +26,8 @@ const Cart = ({ onRemoveFromCart, products }: PropsFromRedux) => {
     { products.map((product, i) => (
       <div key={i}>{product.title} <Button variant="link" onClick={() => onRemoveFromCart(i)}>remove</Button></div>
     ))}
+    
+    <Link to="/checkout"><Button variant="primary">Checkout</Button></Link>
     </>
   )
 };
