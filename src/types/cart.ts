@@ -16,7 +16,6 @@ export interface RemoveFromCartAction {
 
 export interface ViewCartAction {
   type: typeof VIEW_CART,
-  products: Product[],
 }
 
 export type CartActionTypes = AddToCardAction | RemoveFromCartAction | ViewCartAction;

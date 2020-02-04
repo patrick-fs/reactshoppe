@@ -17,9 +17,8 @@ export const removeFromCart = (location: number) : CartActionTypes => {
   }
 }
 
-export const viewCart = (products: Product[]) : CartActionTypes => {
+export const viewCart = () : CartActionTypes => {
   return {
     type: VIEW_CART,
-    products
   }
 }
