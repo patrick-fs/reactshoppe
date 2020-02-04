@@ -1,5 +1,5 @@
 import { Product } from '../services/product';
-import { ADD_TO_CART, REMOVE_FROM_CART, CartActionTypes } from '../types/cart';
+import { ADD_TO_CART, REMOVE_FROM_CART, VIEW_CART, CartActionTypes } from '../types/cart';
 
 // TODO: manage side-effects, update cart in local storage with the cart service
 
@@ -17,3 +17,9 @@ export const removeFromCart = (product: Product) : CartActionTypes => {
   }
 }
 
+export const viewCart = (products: Product[]) : CartActionTypes => {
+  return {
+    type: VIEW_CART,
+    products
+  }
+}

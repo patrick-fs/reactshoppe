@@ -1,6 +1,7 @@
 import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
+  VIEW_CART,
   CartActionTypes,
   CartState,
 } from '../types/cart';
@@ -18,6 +19,10 @@ const cartReducer = (state = initialState, action: CartActionTypes) : CartState 
     case REMOVE_FROM_CART:
       return {
         products: state.products.filter(p => p.title === action.product.title),
+      }
+    case VIEW_CART:
+      return {
+        products: state.products,
       }
     default:
       return state;
