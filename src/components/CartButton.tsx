@@ -17,7 +17,7 @@ type PropsFromRedux = ConnectedProps<typeof connector>;
 
 const CartButton = (props: PropsFromRedux) => {
   return(
-    <Button variant="dark">My Cart {props.products.length}</Button>
+    <Button variant="dark" href="/cart">My Cart {props.products.length}</Button>
   );
 };
 

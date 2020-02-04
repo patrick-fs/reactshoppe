@@ -14,6 +14,9 @@ const App = () => {
         <Navigation />
       </header>
       <Switch>
+      <Route path="/cart">
+          <Checkout />
+        </Route>
         <Route path="/checkout">
           <Checkout />
         </Route>
