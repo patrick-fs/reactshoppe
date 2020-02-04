@@ -6,6 +6,7 @@ const Products = () => {
   const [productList, setProductList] = useState([] as Product[]);
 
   useEffect(() => {
+    // TODO: wire this in through a Redux action
     getProducts().then(products => setProductList(products));
   }, []);
 
