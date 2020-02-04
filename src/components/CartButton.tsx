@@ -10,8 +10,8 @@ const mapDispatch = {
   onViewCart: (products: Product[]) => viewCart(products),
 };
 
-const mapState = (state: RootState) => ({
-  products: state.cartState.products
+const mapState = ({ cartState }: RootState) => ({
+  products: cartState.products
 });
 
 const connector = connect(
@@ -21,7 +21,7 @@ const connector = connect(
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
-const CartButton = ({onViewCart, products}: PropsFromRedux) => {
+const CartButton = ({ onViewCart, products }: PropsFromRedux) => {
   return(
     <Link to="/cart" onClick={() => onViewCart(products)}><Button>My Cart {products.length}</Button></Link>
   );
