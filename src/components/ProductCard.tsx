@@ -6,6 +6,7 @@ import {
   Card,
   Button,
 } from 'react-bootstrap';
+import { url } from 'inspector';
 
 const mapDispatch = {
   onAddToCart: (product: Product) => addToCart(product),
@@ -23,9 +24,10 @@ type Props = PropsFromRedux & {
 };
 
 const ProductCard = ({ onAddToCart, product }: Props) => {
+  const imageStyle = `url(${product.image})`;
   return(
     <Card>
-      <Card.Img variant="top" src={product.image} />
+      <div style={{backgroundImage: imageStyle}} className="productImage"></div>
       <Card.Body>
         <Card.Title>{product.title} - ${product.price}</Card.Title>
         <Card.Text>

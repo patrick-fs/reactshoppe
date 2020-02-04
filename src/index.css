@@ -6,3 +6,19 @@ a.headerLink {
   text-decoration: none;
   color: #000;
 }
+
+.productImage {
+  height: 191px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card {
+  margin-top: 3rem;
+}
+
+.App .container {
+  padding-bottom: 3rem;
+}
