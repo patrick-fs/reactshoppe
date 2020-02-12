@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import * as Sentry from '@sentry/browser';
+import * as FullStory from '@fullstory/browser';
+import SentryFullStory from '@sentry/fullstory';
 import store from './store';
 import {
   BrowserRouter as Router,
@@ -10,6 +13,13 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
+FullStory.init({ orgId: 'QNEN8' });
+
+Sentry.init({
+  dsn: 'https://87dd10a700ea41e9a64df50ec9b367c7@sentry.io/2418505',
+  integrations: [ new SentryFullStory('sentry-test') ]
+});
+
 ReactDOM.render(
   <Router>
     <Provider store={store}>
@@ -18,6 +28,7 @@ ReactDOM.render(
   </Router>,
   document.getElementById('root')
 );
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
