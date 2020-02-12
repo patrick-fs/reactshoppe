@@ -1,4 +1,5 @@
 # Must have `sentry-cli` installed globally
+# See: https://docs.sentry.io/cli/installation/
 # Following variable must be passed in
 # SENTRY_AUTH_TOKEN
 SENTRY_ORG=sentry-test
