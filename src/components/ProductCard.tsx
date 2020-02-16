@@ -6,7 +6,6 @@ import {
   Card,
   Button,
 } from 'react-bootstrap';
-import { url } from 'inspector';
 
 const mapDispatch = {
   onAddToCart: (product: Product) => addToCart(product),
