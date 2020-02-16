@@ -10,7 +10,7 @@ import {
 
 const App = () => {
   return (
-    <div className="App">      
+    <div>      
       <header>
         <Navigation />
       </header>

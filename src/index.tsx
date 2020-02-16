@@ -24,6 +24,8 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+document.body.className = 'bg-light';
+
 ReactDOM.render(
   <Router>
     <Provider store={store}>
