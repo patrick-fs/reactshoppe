@@ -18,7 +18,9 @@ const Cart = () => {
       <Row>
         <Col>
           <CartItems cartView={ViewModifier.DELETE} />          
-          <Link to="/checkout"><Button variant="primary">Checkout</Button></Link>
+          <Link to="/checkout" style={{float:'right', padding:'1rem 0 0 0'}}>
+            <Button variant="primary">Continue to Checkout</Button>
+          </Link>
         </Col>
       </Row>
     </Container>
