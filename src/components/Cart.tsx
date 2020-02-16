@@ -9,31 +9,15 @@ import {
   Col,
   Row,
 } from 'react-bootstrap';
+import CartItems from './CartItems';
+import { ViewModifier } from '../types/cart';
 
-const mapDispatch = {
-  onRemoveFromCart: (location: number) => removeFromCart(location),
-};
-
-const mapState = ({ cartState }: RootState) => ({
-  products: cartState.products
-});
-
-const connector = connect(
-  mapState,
-  mapDispatch,
-);
-
-type PropsFromRedux = ConnectedProps<typeof connector>;
-
-const Cart = ({ onRemoveFromCart, products }: PropsFromRedux) => {
+const Cart = () => {
   return(
     <Container>
       <Row>
         <Col>
-          { products.map((product, i) => (
-            <div key={i}>{product.title} <Button variant="link" onClick={() => onRemoveFromCart(i)}>remove</Button></div>
-          ))}
-          
+          <CartItems cartView={ViewModifier.DELETE} />          
           <Link to="/checkout"><Button variant="primary">Checkout</Button></Link>
         </Col>
       </Row>
@@ -42,4 +26,4 @@ const Cart = ({ onRemoveFromCart, products }: PropsFromRedux) => {
   )
 };
 
-export default connector(Cart);
+export default Cart;

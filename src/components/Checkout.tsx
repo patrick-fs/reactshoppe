@@ -14,7 +14,7 @@ const Checkout = () => {
         <Row>
           <Col md={4} className='order-md-2'>
             <h4>Your Cart</h4>
-            <CartItems cartView={ViewModifier.DELETE} />
+            <CartItems />
           </Col>
           <Col md={8} className='order-md-1'>
             <CheckoutForm />            
