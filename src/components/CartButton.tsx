@@ -22,7 +22,7 @@ type PropsFromRedux = ConnectedProps<typeof connector>;
 
 const CartButton = ({ onViewCart, products }: PropsFromRedux) => {
   return(
-    <Link to="/cart" onClick={() => onViewCart()}><Button>My Cart {products.length}</Button></Link>
+    <Link to="/cart" onClick={() => onViewCart()}><Button>My Cart {products.length} <span className='fa fa-shopping-cart'></span></Button></Link>
   );
 };
 
