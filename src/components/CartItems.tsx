@@ -1,12 +1,9 @@
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux'
-import {
-  ListGroup, Button
-} from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import { RootState } from '../reducers';
 import { CartViewModifier } from '../types/cart';
 import { removeFromCart } from '../actions/cart';
-import { Product } from '../types/product';
 
 const mapState = ({ cartState }: RootState) => ({
   products: cartState.products
