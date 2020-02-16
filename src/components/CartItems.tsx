@@ -33,7 +33,7 @@ const CartItems = ({ products, onRemoveFromCart, cartView }: Props) => {
           {product.title} <span className='text-muted'>{product.quantity}</span>
           <span className='cart-price'>${product.price}
             {cartView === ViewModifier.DELETE &&
-              <span className='fa fa-times text-danger' onClick={() => onRemoveFromCart(i)}></span>
+              <span className='fa fa-times text-danger remove-item' onClick={() => onRemoveFromCart(i)}></span>
             }
           </span>
         </ListGroup.Item>
