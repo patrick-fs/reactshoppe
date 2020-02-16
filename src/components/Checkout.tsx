@@ -6,6 +6,7 @@ import {
 } from 'react-bootstrap';
 import CheckoutForm from './CheckoutForm';
 import CartItems from './CartItems';
+import { ViewModifier } from '../types/cart';
 
 const Checkout = () => {
   return(
@@ -13,7 +14,7 @@ const Checkout = () => {
         <Row>
           <Col md={4} className='order-md-2'>
             <h4>Your Cart</h4>
-            <CartItems />
+            <CartItems cartView={ViewModifier.DELETE} />
           </Col>
           <Col md={8} className='order-md-1'>
             <CheckoutForm />            

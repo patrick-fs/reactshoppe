@@ -23,3 +23,8 @@ export type CartActionTypes = AddToCardAction | RemoveFromCartAction | ViewCartA
 export interface CartState {
   products: Product[],
 }
+
+export enum ViewModifier {
+  DELETE,
+  QUANTITY
+};
