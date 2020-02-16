@@ -41,7 +41,7 @@ const CartItems = ({ products, onRemoveFromCart, cartView }: Props) => {
         </ListGroup.Item>
       ))}
       <ListGroup.Item>
-        <strong>Total</strong> <span className='cart-price'><strong>${cartTotal}</strong></span>
+        <strong>Total</strong> <span className='cart-price'><strong>${cartTotal.toFixed(2)}</strong></span>
       </ListGroup.Item>
     </ListGroup>
   );
