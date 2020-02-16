@@ -4,13 +4,19 @@ import {
   Col,
   Row,
 } from 'react-bootstrap';
+import CheckoutForm from './CheckoutForm';
+import CartItems from './CartItems';
 
 const Checkout = () => {
   return(
-    <Container>
+    <Container className='checkout-container'>
         <Row>
-          <Col>
-            <div>Checkout</div>
+          <Col md={4} className='order-md-2'>
+            <h4>Your Cart</h4>
+            <CartItems />
+          </Col>
+          <Col md={8} className='order-md-1'>
+            <CheckoutForm />            
           </Col>
         </Row>
     </Container>
