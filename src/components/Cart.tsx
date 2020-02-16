@@ -21,7 +21,6 @@ const Cart = () => {
           <Link to="/checkout"><Button variant="primary">Checkout</Button></Link>
         </Col>
       </Row>
-    
     </Container>
   )
 };

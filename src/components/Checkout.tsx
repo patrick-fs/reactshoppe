@@ -6,7 +6,6 @@ import {
 } from 'react-bootstrap';
 import CheckoutForm from './CheckoutForm';
 import CartItems from './CartItems';
-import { ViewModifier } from '../types/cart';
 
 const Checkout = () => {
   return(
