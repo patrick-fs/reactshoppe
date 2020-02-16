@@ -15,6 +15,7 @@ type ProductGridProps = {
 const BOOTSTRAP_GRID_WIDTH = 12;
 
 const ProductGrid = ({ productList, columnCount = 3 }: ProductGridProps) => {
+  // TODO: gaurd against columnCount being set to 0
   let productRows: Product[][] = [];
   let productColumns: Product[] = [];
   productList.forEach(product => {    
