@@ -13,7 +13,7 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production') {
   FullStory.init({ orgId: 'QNEN8' });
 
   Sentry.init({
