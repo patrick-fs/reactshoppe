@@ -9,13 +9,10 @@ const Navigation = () => {
   return (
     <Navbar bg="light" expand="lg" fixed="top">
       <Navbar.Brand><Link to="/" className="headerLink">Reactshoppe</Link></Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto"></Nav>
         <Nav>
           <CartButton />
         </Nav>
-      </Navbar.Collapse>
     </Navbar>
   );
 }
