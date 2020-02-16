@@ -4,7 +4,7 @@ import {
   ListGroup, Button
 } from 'react-bootstrap';
 import { RootState } from '../reducers';
-import { ViewModifier } from '../types/cart';
+import { CartViewModifier } from '../types/cart';
 import { removeFromCart } from '../actions/cart';
 import { Product } from '../types/product';
 
@@ -23,10 +23,10 @@ const connector = connect(
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
 type Props = PropsFromRedux & {
-  cartView?: ViewModifier
+  cartView?: CartViewModifier
 }
 
-const CartItems = ({ products, onRemoveFromCart, cartView }: Props) => {
+const CartItems = ({ products, onRemoveFromCart, cartView = CartViewModifier.NONE }: Props) => {
   const cartTotal = products.reduce((total, prod) => total + prod.price, 0);
   return (
     <ListGroup>
@@ -34,10 +34,10 @@ const CartItems = ({ products, onRemoveFromCart, cartView }: Props) => {
         <ListGroup.Item key={i}>
           {product.title}
           <span className='cart-price'>${product.price} <span className='text-muted'>{product.quantity}</span>
-            {cartView === ViewModifier.DELETE &&
+            {CartViewModifier.DELETE === (cartView & CartViewModifier.DELETE) &&
               <span className='fa fa-times text-danger remove-item' onClick={() => onRemoveFromCart(i)}></span>
             }
-          </span>
+          </span>                     
         </ListGroup.Item>
       ))}
       <ListGroup.Item>

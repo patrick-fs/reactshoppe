@@ -10,7 +10,7 @@ import {
   Row,
 } from 'react-bootstrap';
 import CartItems from './CartItems';
-import { ViewModifier } from '../types/cart';
+import { CartViewModifier } from '../types/cart';
 
 const Cart = () => {
   return(
@@ -23,7 +23,7 @@ const Cart = () => {
       </Row>
       <Row>        
         <Col>          
-          <CartItems cartView={ViewModifier.DELETE} />          
+          <CartItems cartView={CartViewModifier.DELETE} />          
           <Link to="/checkout" style={{float:'right', padding:'1rem 0 0 0'}}>
             <Button variant="primary">Continue to Checkout</Button>
           </Link>
