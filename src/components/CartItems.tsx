@@ -1,20 +1,31 @@
 import React from 'react';
+import { connect, ConnectedProps } from 'react-redux'
 import {
-  Col,
-  Row,
   ListGroup
 } from 'react-bootstrap';
+import { RootState } from '../reducers';
 
-const CartItems = () => {
+const mapState = ({ cartState }: RootState) => ({
+  products: cartState.products
+});
+
+const connector = connect(
+  mapState,
+);
+
+type PropsFromRedux = ConnectedProps<typeof connector>;
+
+const CartItems = ({ products }: PropsFromRedux) => {
   return (
     <ListGroup>
-      <ListGroup.Item>Cras justo odio</ListGroup.Item>
-      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-      <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-      <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-      <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+      { products.map((product) => (
+        <ListGroup.Item>
+          {product.title} <span className='text-muted'>{product.quantity}</span>
+          <span className='cart-price'>${product.price}</span>
+        </ListGroup.Item>
+      ))}
     </ListGroup>
   );
 };
 
-export default CartItems;
+export default connector(CartItems);

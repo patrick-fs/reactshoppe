@@ -35,3 +35,7 @@ a.headerLink {
 .checkout-container .row {
   padding: 2rem 0 0 0;
 }
+
+.cart-price {
+  float: right;
+}
