@@ -2,13 +2,13 @@ body {
   margin: 0;
 }
 
-a.headerLink {
+a.header-link {
   text-decoration: none;
   color: #FFF;
 }
 
 
-.productImage {
+.product-image {
   height: 191px;
   width: 100%;
   background-repeat: no-repeat;

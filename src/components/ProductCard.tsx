@@ -25,7 +25,7 @@ type Props = PropsFromRedux & {
 const ProductCard = ({ onAddToCart, product }: Props) => {  
   return(
     <Card>
-      <div style={{backgroundImage: `url(${product.image})`}} className="productImage"></div>
+      <div style={{backgroundImage: `url(${product.image})`}} className="product-image"></div>
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>
         <Card.Text>
