@@ -3,13 +3,21 @@ import {
   Container,
   Col,
   Row,
+  Jumbotron
 } from 'react-bootstrap';
 
 const ThankYou = () => {
   return(
-    <>
-    <div>thanks</div>
-    </>
+    <Container>
+      <Row>
+        <Col>
+          <Jumbotron>
+            <h1>Thanks!</h1>
+          </Jumbotron>
+        </Col>
+      </Row>    
+    </Container>
+   
   );
 };
 
