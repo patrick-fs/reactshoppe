@@ -2,97 +2,113 @@
     {
       "title": "Bananas",
       "description": "The old reliable.",
-      "price": "2.99 lb.",
-      "image": "banans.jpg"
+      "price": 2.99,
+      "image": "banans.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Bluebs",
       "description": "Extra organical and powered by blue.",
-      "price": "6.75 lb.",
-      "image": "bluebs.jpg"
+      "price": 6.75,
+      "image": "bluebs.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Carambola",
       "description": "An all-star flavor.",
-      "price": "7.24 lb.",
-      "image": "carambola.jpg"
+      "price": 7.24,
+      "image": "carambola.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Cherries",
       "description": "Deeply red and passionate.",
-      "price": "6.99 lb.",
-      "image": "cherries.jpg"
+      "price": 6.99,
+      "image": "cherries.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Cocktail Mix",
       "description": "Virgin mix for adult use.",
-      "price": "15.00 gallon",
-      "image": "mixeddrink.jpg"
+      "price": 15.00,
+      "image": "mixeddrink.jpg",
+      "quantity": "gallon"
     },
     {
       "title": "Dragon Fruit",
       "description": "Kissed by fire, not spicy.",
-      "price": "8.43 ea.",
-      "image": "dragonfruit.jpg"
+      "price": 8.43,
+      "image": "dragonfruit.jpg",
+      "quantity": "ea."
     },
     {
       "title": "Durian",
       "description": "Smells worse than it looks.",
-      "price": "14.99 ea.",
-      "image": "durian.jpg"
+      "price": 14.99,
+      "image": "durian.jpg",
+      "quantity": "ea."
     },
     {
       "title": "Grapes",
       "description": "Use either for raisin or wine.",
-      "price": "7.24 lb.",
-      "image": "grapes.jpg"
+      "price": 7.24,
+      "image": "grapes.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Green Beans",
       "description": "Beans, beans... great for your heart.",
-      "price": "1.79 lb.",
-      "image": "beans.jpg"
+      "price": 1.79,
+      "image": "beans.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Mangocados",
       "description": "Highly experimental new frewt.",
-      "price": "7.99 ea.",
-      "image": "mangocados.jpg"
+      "price": 7.99,
+      "image": "mangocados.jpg",
+      "quantity": "ea."
     },
     {
       "title": "One Pear",
       "description": "One lonely pear, eat while sobbing.",
-      "price": "4.99",
-      "image": "pear.jpg"
+      "price": 4.99,
+      "image": "pear.jpg",
+      "quantity": ""
     },
     {
       "title": "Oranges de Florida",
       "description": "Lose the sleeves, you're in Florida.",
-      "price": "4.99 lb.",
-      "image": "oranges.jpg"
+      "price": 4.99,
+      "image": "oranges.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Peacharines",
       "description": "This one's on us, Mother Nature.",
-      "price": "6.39 lb.",
-      "image": "peacherines.jpg"
+      "price": 6.39,
+      "image": "peacherines.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Peaches",
       "description": "The pride and joy of Georgia.",
-      "price": "4.29 lb.",
-      "image": "peaches.jpg"
+      "price": 4.29,
+      "image": "peaches.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Pears",
       "description": "More than one pear, pears.",
-      "price": "9.22 lb.",
-      "image": "pears.jpg"
+      "price": 9.22,
+      "image": "pears.jpg",
+      "quantity": "lb."
     },
     {
       "title": "Raspberries",
       "description": "Next stop, Yumsville.",
-      "price": "5.99 lb.",
-      "image": "rasps.jpg"
+      "price": 5.99,
+      "image": "rasps.jpg",
+      "quantity": "lb."
     }
   ]

@@ -2,12 +2,13 @@ body {
   margin: 0;
 }
 
-a.headerLink {
+a.header-link {
   text-decoration: none;
-  color: #000;
+  color: #FFF;
 }
 
-.productImage {
+
+.product-image {
   height: 191px;
   width: 100%;
   background-repeat: no-repeat;
@@ -20,5 +21,27 @@ a.headerLink {
 }
 
 .container {
-  padding: 3rem 0 3rem 0;
+  padding: 5rem 1rem 3rem 1rem;
+}
+
+.product-container {
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+.cart-button {
+  float: right;
+}
+
+.checkout-container .row {
+  padding: 2rem 0 0 0;
+}
+
+.cart-price {
+  float: right;
+}
+
+.remove-item {
+  display: inline-block;
+  padding-left: 1rem;
+  cursor: pointer;
 }

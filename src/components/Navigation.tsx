@@ -7,15 +7,12 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <Navbar bg="light" expand="lg" fixed="top">
-      <Navbar.Brand><Link to="/" className="headerLink">Reactshoppe</Link></Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
+    <Navbar bg="dark" expand="lg" fixed="top">
+      <Navbar.Brand><Link to="/" className="header-link">Reactshoppe</Link></Navbar.Brand>
       <Nav className="mr-auto"></Nav>
         <Nav>
           <CartButton />
         </Nav>
-      </Navbar.Collapse>
     </Navbar>
   );
 }
