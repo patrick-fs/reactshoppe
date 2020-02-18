@@ -14,7 +14,7 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-const release = 'v1.0.0';
+const release = '52c17c4c377121e75c14aa2dc51f62769c76446b';
 
 FullStory.init({ orgId: 'QNEN8' });
 
