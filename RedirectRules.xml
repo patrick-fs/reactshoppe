@@ -1,0 +1,10 @@
+<RoutingRules>
+  <RoutingRule>
+    <Condition>
+      <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals >
+    </Condition>
+    <Redirect>
+      <HostName>reactshoppe.s3-website-us-east-1.amazonaws.com</HostName>
+    </Redirect>
+  </RoutingRule>
+</RoutingRules>
