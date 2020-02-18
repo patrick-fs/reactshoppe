@@ -20,6 +20,7 @@ const analyticsMiddleware: Middleware<
       trackCartSize(products);
     }
   } catch (error) {
+    console.error(error);
     Sentry.captureException(error);
   }
   
