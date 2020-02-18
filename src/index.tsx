@@ -14,15 +14,13 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-if (process.env.NODE_ENV === 'production') {
-  FullStory.init({ orgId: 'QNEN8' });
+FullStory.init({ orgId: 'QNEN8' });
 
-  Sentry.init({
-    dsn: 'https://87dd10a700ea41e9a64df50ec9b367c7@sentry.io/2418505',
-    integrations: [ new SentryFullStory('sentry-test') ],
-    release: process.env.REACT_APP_SENTRY_RELEASE,
-  });
-}
+Sentry.init({
+  dsn: 'https://87dd10a700ea41e9a64df50ec9b367c7@sentry.io/2418505',
+  integrations: [ new SentryFullStory('sentry-test') ],
+  release: process.env.REACT_APP_SENTRY_RELEASE,
+});
 
 document.body.className = 'bg-light';
 
