@@ -17,7 +17,7 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
     <>    
     <h4>Billing Address</h4>
     <Form onSubmit={onSubmit}>
-      <Row>
+      <Row className='fs-block'>
       <Col md={6}>
         <label htmlFor='firstName'>First name</label>
         <input type='text' className='form-control' id='firstName'></input>                
@@ -27,25 +27,25 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
         <input type='text' className='form-control' id='lastName'></input>
       </Col>
       </Row>            
-      <Row>
+      <Row className='fs-block'>
       <Col>
         <label htmlFor='email'>Email <span className='text-muted'>(Optional)</span></label>                
         <input type='text' className='form-control' id='email' placeholder='you@example.com'></input>
       </Col>
       </Row>
-      <Row>
+      <Row className='fs-block'>
       <Col>
         <label htmlFor='address'>Address</label>                
         <input type='text' className='form-control' id='address' placeholder='1234 Main St'></input>
       </Col>
       </Row>
-      <Row>
+      <Row className='fs-block'>
       <Col>
         <label htmlFor='address2'>Address 2 <span className='text-muted'>(Optional)</span></label>                
         <input type='text' className='form-control' id='address2' placeholder='Apartment or suite'></input>
       </Col>
       </Row>
-      <Row>
+      <Row className='fs-block'>
       <Col md={5}>
         <label htmlFor='country'>Country</label>
         <select className='custom-select d-block w-100' id='country'>
@@ -79,7 +79,7 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
         <hr/>
       </Col>
       </Row>
-      <Row>
+      <Row className='fs-block'>
       <Col>
         <h4>Payment</h4>
         <div className="custom-control custom-radio">
@@ -96,7 +96,7 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
         </div>
       </Col>
       </Row>
-      <Row>
+      <Row className='fs-block'>
       <Col md={6}>
         <label htmlFor="cc-name">Name on card</label>
         <input type="text" className="form-control" id="cc-name"></input>
@@ -107,7 +107,7 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
         <input type="text" className="form-control" id="cc-number"></input>
       </Col>
       </Row>
-      <Row>
+      <Row className='fs-block'>
       <Col md={3}>
         <label htmlFor="cc-expiration">Expiration</label>
         <input type="text" className="form-control" id="cc-expiration"></input>                
