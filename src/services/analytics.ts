@@ -6,6 +6,10 @@ export const trackCartSize = (products: Product[]) => {
     return total + current.price;
   }, 0);
 
+  if (products.length > 3) {
+    throw new Error("Too many items in cart");
+  }
+
   let avgRevenuePerItem = totalCartRevenue / products.length;
 
   if (isNaN(avgRevenuePerItem)) throw new Error('NaN');

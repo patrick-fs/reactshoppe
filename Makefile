@@ -4,7 +4,7 @@
 # SENTRY_AUTH_TOKEN
 SENTRY_ORG=sentry-test
 SENTRY_PROJECT=fullstory-demo
-VERSION=`sentry-cli releases propose-version`
+VERSION=v1.0.0
 PREFIX=static/js
 
 setup_release: create_release associate_commits upload_sourcemaps
