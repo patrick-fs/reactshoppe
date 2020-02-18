@@ -67,7 +67,8 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
     <>    
     <h4>Billing Address</h4>
     <Form onSubmit={onSubmit}>
-      <Row className='fs-block'>
+      <div className='fs-block'>
+      <Row>
       <Col md={6}>
         <label htmlFor='firstName'>First name</label>
         <input type='text' className='form-control' id='firstName' 
@@ -79,28 +80,28 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
           defaultValue={lastName} onChange={e => setLastName(e.target.value)}></input>
       </Col>
       </Row>            
-      <Row className='fs-block'>
+      <Row>
       <Col>
         <label htmlFor='email'>Email <span className='text-muted'>(Optional)</span></label>                
         <input type='text' className='form-control' id='email' placeholder='you@example.com' 
           defaultValue={email} onChange={e => setEmail(e.target.value)}></input>
       </Col>
       </Row>
-      <Row className='fs-block'>
+      <Row>
       <Col>
         <label htmlFor='address'>Address</label>                
         <input type='text' className='form-control' id='address' placeholder='1234 Main St' 
           defaultValue={street1} onChange={e => setStreet1(e.target.value)}></input>
       </Col>
       </Row>
-      <Row className='fs-block'>
+      <Row>
       <Col>
         <label htmlFor='address2'>Address 2 <span className='text-muted'>(Optional)</span></label>                
         <input type='text' className='form-control' id='address2' placeholder='Apartment or suite' 
           defaultValue={street2} onChange={e => setStreet2(e.target.value)}></input>
       </Col>
       </Row>
-      <Row className='fs-block'>
+      <Row>
       <Col md={5}>
         <label htmlFor='country'>Country</label>
         <select className='custom-select d-block w-100' id='country' defaultValue={country} onChange={e => setCountry(e.target.value)}>
@@ -121,6 +122,7 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
           defaultValue={zip} onChange={e => setZip(e.target.value)}></input>
       </Col>
       </Row>
+      </div>
       <Row>
       <Col>
         <hr/>        
@@ -131,7 +133,8 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
         <hr/>
       </Col>
       </Row>
-      <Row className='fs-block'>
+      <div className='fs-block'>
+      <Row>
       <Col>
         <h4>Payment</h4>
         <div className="custom-control custom-radio">
@@ -148,20 +151,20 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
         </div>
       </Col>
       </Row>
-      <Row className='fs-block'>
+      <Row>
       <Col md={6}>
-        <label htmlFor="cc-name">Name on card</label>
-        <input type="text" className="form-control" id="cc-name" 
+        <label htmlFor="ccname">Name on card</label>
+        <input type="text" className="form-control" id="ccname" 
           defaultValue={ccName} onChange={e => setCcName(e.target.value)}></input>
         <small className="text-muted">Full name as displayed on card</small>
       </Col>
       <Col md={6}>
-        <label htmlFor="cc-number">Credit card number</label>
-        <input type="text" className="form-control" id="cc-number" 
+        <label htmlFor="ccnumber">Credit card number</label>
+        <input type="text" className="form-control" id="ccnumber" 
           defaultValue={ccNumber} onChange={e => setCcNumber(e.target.value)}></input>
       </Col>
       </Row>
-      <Row className='fs-block'>
+      <Row>
       <Col md={3}>
         <label htmlFor="cc-expiration">Expiration</label>
         <input type="text" className="form-control" id="cc-expiration" 
@@ -173,6 +176,7 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
           defaultValue={ccCVV} onChange={e => setCcCVV(e.target.value)}></input>
       </Col>
       </Row>
+      </div>
       <Row>
       <Col>
         <hr />
