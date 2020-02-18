@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux'
 import { viewCart } from '../actions/cart';
-import { RootState } from '../reducers';
+import { RootState } from "../store";
 import { Button } from 'react-bootstrap';
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 import { History } from 'history';

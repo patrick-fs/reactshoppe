@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux'
 import { ListGroup } from 'react-bootstrap';
-import { RootState } from '../reducers';
+import { RootState } from "../store";
 import { CartViewModifier } from '../types/cart';
 import { removeFromCart } from '../actions/cart';
 
