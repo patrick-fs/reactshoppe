@@ -58,7 +58,7 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
       products: [],
     };
 
-    console.log(`street 2: ${checkoutData.paymentInfo.billingAddress.street2}`);
+    makePurchase(checkoutData);
 
     history.push('/thankyou');
   };
