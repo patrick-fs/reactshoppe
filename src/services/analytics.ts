@@ -6,10 +6,6 @@ export const trackCartSize = (products: Product[]) => {
     return total + current.price;
   }, 0);
 
-  if (products.length > 2) {
-    throw new Error("Over two items in cart");
-  }
-
   let avgRevenuePerItem = totalCartRevenue / products.length;
 
   if (isNaN(avgRevenuePerItem)) throw new Error('NaN');
@@ -17,6 +13,10 @@ export const trackCartSize = (products: Product[]) => {
   const val = parseFloat(avgRevenuePerItem.toFixed(2));
   
   console.log(`avgRevenuePerItem: ${val}`);
+
+  if (products.length < 2) {
+    throw new Error("Less than two items in cart");
+  }
 
   FullStory.event('Revenue per cart item', { avgRevenuePerItem_real: avgRevenuePerItem });
 }
