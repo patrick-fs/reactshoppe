@@ -14,7 +14,8 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-const release = '52c17c4c377121e75c14aa2dc51f62769c76446b';
+
+const release = (window as any).RELEASE;
 
 FullStory.init({ orgId: 'QNEN8' });
 
