@@ -11,10 +11,6 @@ export const trackCartSize = (products: Product[]) => {
   if (isNaN(avgRevenuePerItem)) throw new Error('NaN');
 
   const val = parseFloat(avgRevenuePerItem.toFixed(2));
-
-  if (products.length === 2) {
-    throw new Error("Exactly two items in cart");
-  }
   
   console.log(`avgRevenuePerItem: ${val}`);
 
