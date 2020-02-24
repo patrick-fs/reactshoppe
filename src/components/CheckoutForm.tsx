@@ -153,25 +153,25 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
       </Row>
       <Row>
       <Col md={6}>
-        <label htmlFor="ccname">Name on card</label>
+        <label>Name on card</label>
         <input type="text" className="form-control" 
           defaultValue={ccName} onChange={e => setCcName(e.target.value)}></input>
         <small className="text-muted">Full name as displayed on card</small>
       </Col>
       <Col md={6}>
-        <label htmlFor="ccnumber">Credit card number</label>
+        <label >Credit card number</label>
         <input type="text" className="form-control"
           defaultValue={ccNumber} onChange={e => setCcNumber(e.target.value)}></input>
       </Col>
       </Row>
       <Row>
       <Col md={3}>
-        <label htmlFor="cc-expiration">Expiration</label>
+        <label>Expiration</label>
         <input type="text" className="form-control"
           defaultValue={ccExpiration} onChange={e => setCcExpiration(e.target.value)}></input>                
       </Col>
       <Col md={3}>
-        <label htmlFor="cc-cvv">CVV</label>
+        <label>CVV</label>
         <input type="text" className="form-control"
           defaultValue={ccCVV} onChange={e => setCcCVV(e.target.value)}></input>
       </Col>
