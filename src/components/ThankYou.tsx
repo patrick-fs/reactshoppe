@@ -13,6 +13,7 @@ const ThankYou = () => {
         <Col>
           <Jumbotron>
             <h1>Thanks!</h1>
+            <p className="lead">We hope you enjoy your fruit.</p>
           </Jumbotron>
         </Col>
       </Row>    
