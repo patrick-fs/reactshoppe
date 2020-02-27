@@ -7,11 +7,21 @@ import {
 import { connect, ConnectedProps } from 'react-redux'
 import { withRouter, RouteComponentProps } from 'react-router-dom'
 import { PaymentInfo, ContactInfo, Address, CheckoutData } from '../types/checkout';
-import { Product } from '../types/product';
-import { makePurchase } from '../services/checkout';
+import { checkoutCart } from '../actions/cart';
+import { History } from 'history';
 
+const mapDispatch = {
+  onCheckout: (history: History, checkoutData: CheckoutData) => checkoutCart(history, checkoutData),
+};
 
-const CheckoutForm = ({ history }: RouteComponentProps) => {
+const connector = connect(
+  null,
+  mapDispatch,
+);
+
+type Props = ConnectedProps<typeof connector> & RouteComponentProps;
+
+const CheckoutForm = ({ history, onCheckout }: Props) => {
   const [firstName, setFirstName] = useState();
   const [lastName, setEmail] = useState();
   const [email, setLastName] = useState();
@@ -58,9 +68,7 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
       products: [],
     };
 
-    makePurchase(checkoutData);
-
-    history.push('/thankyou');
+    onCheckout(history, checkoutData);
   };
 
   return (
@@ -188,4 +196,4 @@ const CheckoutForm = ({ history }: RouteComponentProps) => {
   );
 };
 
-export default withRouter(CheckoutForm);
+export default withRouter(connector(CheckoutForm));

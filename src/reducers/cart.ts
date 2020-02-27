@@ -2,6 +2,7 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   VIEW_CART,
+  CHECKOUT_CART,
   CartActionTypes,
   CartState,
 } from '../types/cart';
@@ -30,6 +31,10 @@ const cartReducer = (state = initialState, action: CartActionTypes) : CartState 
     case VIEW_CART:
       return {
         products: state.products.sort(sortByTitle),
+      }
+    case CHECKOUT_CART:
+      return {
+        products: [],
       }
     default:
       return state;
