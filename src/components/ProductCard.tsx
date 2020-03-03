@@ -31,7 +31,7 @@ const ProductCard = ({ onAddToCart, product }: Props) => {
         <Card.Text>
           {product.description}
         </Card.Text>
-        <span className='price'>${product.price} {product.quantity}</span>
+        <span className='price'>${product.price} {product.unit}</span>
         <Button className='cart-button' variant="outline-primary" onClick={() => onAddToCart(product)}>Add to Cart</Button>
       </Card.Body>
     </Card>
