@@ -30,7 +30,8 @@ const cartReducer = (state = initialState, action: CartActionTypes) : CartState 
       }
     case VIEW_CART:
       return {
-        products: state.products.sort(sortByTitle),
+        // sort without mutating mutating the previous state
+        products: state.products.slice().sort(sortByTitle),
       }
     case CHECKOUT_CART:
       return {
