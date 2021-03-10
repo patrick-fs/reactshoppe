@@ -6,7 +6,7 @@ export const trackCartSize = (products: Product[]) => {
     return total + current.price;
   }, 0);
 
-  let avgRevenuePerItem = totalCartRevenue / products.length;
+  let avgRevenuePerItem = products.length > 0 ? totalCartRevenue / products.length : 0;
 
   if (isNaN(avgRevenuePerItem)) throw new Error('NaN');
 
