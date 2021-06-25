@@ -5,7 +5,6 @@ import { CartActionTypes,
   REMOVE_FROM_CART,
 } from '../types/cart';
 import { trackCartSize } from '../services/analytics';
-import * as Sentry from '@sentry/browser';
 
 const analyticsMiddleware: Middleware<
   {}, 
@@ -21,7 +20,8 @@ const analyticsMiddleware: Middleware<
     }
   } catch (error) {
     console.error(error);
-    Sentry.captureException(error);
+    // Sentry.captureException(error);
+    throw error;
   }
   
   return result;

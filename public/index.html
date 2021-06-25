@@ -25,6 +25,36 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Reactshoppe</title>
+    <script type="text/javascript">
+
+      window.addEventListener('unhandledrejection', function(event) {
+        // the event object has two special properties:
+        console.log(event.promise); // [object Promise] - the promise that generated the error
+        console.log(event.reason); // Error: Whoops! - the unhandled error object
+      });
+
+      window.addEventListener('error', function(event) {
+        const { message, filename, lineno, colno } = event;
+        const payload = {
+          embedOrgId: 'e86e8fcb-67d0-46a7-ab26-3ece747e99c1',
+          error: { message, filename, lineno, colno },
+          extraData: { fullstoryUrl: FS.getCurrentSessionURL(true) }
+        };
+
+        console.log(JSON.stringify(payload));
+
+        const embugEventEndpoint = 'https://eazcdufg74.execute-api.us-east-1.amazonaws.com/prod/events';
+
+        fetch(embugEventEndpoint, {
+          method: 'post',
+          body: JSON.stringify(payload)
+        }).then(function(response) {
+          return response.text();
+        }).then(function(data) {
+          console.log(data);
+        });
+      });
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
