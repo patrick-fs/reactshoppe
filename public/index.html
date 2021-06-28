@@ -49,7 +49,7 @@
           method: 'post',
           body: JSON.stringify(payload)
         }).then(function(response) {
-          return response.text();
+          return response.json();
         }).then(function(data) {
           console.log(data);
         });
