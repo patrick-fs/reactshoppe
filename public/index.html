@@ -36,16 +36,14 @@
       window.addEventListener('error', function(event) {
         const { message, filename, lineno, colno } = event;
         const payload = {
-          orgId: '6ee0295b-2f37-493f-bf8a-fdb459ab50e8',
+          orgId: '%REACT_APP_ORG_ID%',
           error: { message, filename, lineno, colno },
           extraData: { fullstoryUrl: FS.getCurrentSessionURL(true) }
         };
 
         console.log(JSON.stringify(payload));
 
-        const embugEventEndpoint = 'https://w34a189qel.execute-api.us-east-1.amazonaws.com/prod/events';
-
-        fetch(embugEventEndpoint, {
+        fetch('%REACT_APP_EVENTS_ENDPOINT%', {
           method: 'post',
           body: JSON.stringify(payload)
         }).then(function(response) {
