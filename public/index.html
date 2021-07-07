@@ -25,33 +25,14 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Reactshoppe</title>
+    <script type="text/javascript" src="%REACT_APP_EMBUG_SNIPPET_URL%"></script>
     <script type="text/javascript">
-
-      window.addEventListener('unhandledrejection', function(event) {
-        // the event object has two special properties:
-        console.log(event.promise); // [object Promise] - the promise that generated the error
-        console.log(event.reason); // Error: Whoops! - the unhandled error object
-      });
-
-      window.addEventListener('error', function(event) {
-        const { message, filename, lineno, colno } = event;
-        const payload = {
-          orgId: '%REACT_APP_ORG_ID%',
-          error: { message, filename, lineno, colno },
-          extraData: { fullstoryUrl: FS.getCurrentSessionURL(true) }
-        };
-
-        console.log(JSON.stringify(payload));
-
-        fetch('%REACT_APP_EVENTS_ENDPOINT%', {
-          method: 'post',
-          body: JSON.stringify(payload)
-        }).then(function(response) {
-          return response.json();
-        }).then(function(data) {
-          console.log(data);
-        });
-      });
+        const app = window[window._embug_namespace];
+        app.addEventProcessor((e) => {
+            e.extraData = { fullstoryUrl: FS.getCurrentSessionURL(true) }
+            return e;
+        })
+        app.init({orgId: "%REACT_APP_ORG_ID%", eventsEndpoint: "%REACT_APP_EVENTS_ENDPOINT%" })
     </script>
   </head>
   <body>
