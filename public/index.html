@@ -30,6 +30,7 @@
         const app = window[window._embug_namespace];
         app.addEventProcessor((e) => {
             e.extraData = { fullstoryUrl: FS.getCurrentSessionURL(true) }
+            FS.event('Browser Error');
             return e;
         })
         app.init({orgId: "%REACT_APP_ORG_ID%", eventsEndpoint: "%REACT_APP_EVENTS_ENDPOINT%" })
