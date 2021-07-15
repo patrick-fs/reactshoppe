@@ -12,7 +12,7 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-FullStory.init({ orgId: 'QNEN8' });
+FullStory.init({ orgId: process.env.REACT_APP_FULLSTORY_ORG_ID ?? '' });
 
 document.body.className = 'bg-light';
 
