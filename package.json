@@ -28,7 +28,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "predeploy": "npm run build && make setup_release",
+    "predeploy": "npm run build",
     "deploy": "serve -s build",
     "start": "react-scripts start",
     "build": "react-scripts build",

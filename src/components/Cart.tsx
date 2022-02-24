@@ -11,7 +11,7 @@ import { CartViewModifier } from '../types/cart';
 
 const Cart = () => {
   return(
-    <Container>
+    <Container className='cart-container'>
       <Row>
         <Col>
           <span style={{float:'right'}}><Link to="/">Keep shoppe-ing</Link></span>
